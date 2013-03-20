@@ -10,7 +10,7 @@
         
         function setCount() {
             var chars     = that.value.length;
-            var container = $(that).parent();
+            var container = $(that).closest("div");
 
             if ( chars > settings.limit ) {
                 that.value = that.value.substr(0, settings.limit);
@@ -19,7 +19,7 @@
             var amount = settings.limit - chars;
 
             if ( container.find(".charleft").length <= 0 ) {
-                $("<div class='charleft originalTextareaInfo'><span class='amount'>"+ amount +"</span> "+ settings.sentence +"</div>")
+                $('<div class="charleft"><span class="amount">'+ amount +'</span> '+ settings.sentence + '</div>')
                     .insertAfter(that);
             } else {
                 container.find(".charleft span.amount").html(amount);
