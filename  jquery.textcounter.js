@@ -1,6 +1,6 @@
 ;(function ($){
     $.fn.textcounter = function(options) {
-        var that = $(this)[0];
+        var that = $(this);
         var settings = {
             sentence: "tekens beschikbaar",
             limit: 256
