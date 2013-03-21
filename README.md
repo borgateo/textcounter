@@ -20,7 +20,7 @@ Run the plugin
 $(function() {
   $("#counter").textcounter({
       limit: 50,
-      sentece: ' left characters'
+      sentence: ' left characters'
   });
 });
 ```
@@ -34,5 +34,5 @@ Amount of charaters available
 ### Sentence
 Type: `String`
 
-Sentece showed in the Display info. For example: 50 left characters.
+Sentence showed in the Display info. For example: 50 left characters.
 
