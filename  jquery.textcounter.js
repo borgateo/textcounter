@@ -2,7 +2,7 @@
     $.fn.textcounter = function(options) {
         var that = $(this);
         var settings = {
-            sentence: "tekens beschikbaar",
+            sentence: "left characters",
             limit: 256
         };
             
@@ -18,15 +18,15 @@
             }
             var amount = settings.limit - chars;
 
-            if ( container.find(".charleft").length <= 0 ) {
+            if ( container.find('.charleft').length <= 0 ) {
                 $('<div class="charleft"><span class="amount">'+ amount +'</span> '+ settings.sentence + '</div>')
                     .insertAfter(that);
             } else {
-                container.find(".charleft span.amount").html(amount);
+                container.find('.charleft span.amount').html(amount);
             }
         }
 
-        $(this).on("keyup focus", function() {
+        $(this).on('keyup focus', function() {
             setCount();
         });
         setCount();
