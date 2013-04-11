@@ -10,7 +10,7 @@
         
         function setCount() {
             var chars     = that.value.length;
-            var container = $(that).closest("div");
+            var container = $(that).closest('div');
 
             if ( chars > settings.limit ) {
                 that.value = that.value.substr(0, settings.limit);
